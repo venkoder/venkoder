@@ -1,0 +1,58 @@
+{
+    "profile": {
+        "name": "VENKODER",
+        "title": "Full Stack Developer",
+        "subtitle": "Building the future, one commit at a time",
+        "theme": {
+            "primary": "#00ff41",
+            "secondary": "#00ffff",
+            "accent": "#ff0080",
+            "warning": "#ff6b35",
+            "background": "#0d1117"
+        }
+    },
+    "projects": {
+        "max_display": 3,
+        "exclude_repos": [
+            "dotfiles",
+            "config",
+            "venkoder"
+        ],
+        "min_stars": 0,
+        "show_if_empty": false,
+        "scoring": {
+            "star_weight": 10,
+            "fork_weight": 5,
+            "recent_activity_bonus": 50,
+            "language_bonuses": {
+                "JavaScript": 20,
+                "TypeScript": 25,
+                "Python": 20,
+                "React": 30,
+                "Vue": 20,
+                "Go": 20,
+                "Rust": 25,
+                "Java": 15,
+                "Swift": 15,
+                "Kotlin": 15
+            }
+        }
+    },
+    "animations": {
+        "enable_gifs": true,
+        "typing_speed": 2000,
+        "pulse_duration": 3000
+    },
+    "social": {
+        "twitter": "venkoder",
+        "linkedin": "venkoder",
+        "email": "venkoder@example.com",
+        "website": "https://venkoder.dev"
+    },
+    "stats": {
+        "show_wakatime": true,
+        "show_activity_graph": true,
+        "show_language_stats": true,
+        "show_streak_stats": true
+    }
+}
