@@ -37,7 +37,7 @@ jobs:
             - name: 🔍 Check Repository Status
               id: check
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  GITHUB_TOKEN: ${{ secrets.GH_PROFILE_TOKEN }}
                   USERNAME: ${{ github.repository_owner }}
               run: |
                   REPO_DATA=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
@@ -67,7 +67,7 @@ jobs:
             - name: 🔄 Checkout
               uses: actions/checkout@v4
               with:
-                  token: ${{ secrets.GITHUB_TOKEN }}
+                  token: ${{ secrets.GH_PROFILE_TOKEN }}
                   fetch-depth: 0
 
             - name: 🐍 Setup Python
@@ -106,7 +106,7 @@ jobs:
 
             - name: 🎨 Update Projects Section
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  GITHUB_TOKEN: ${{ secrets.GH_PROFILE_TOKEN }}
                   USERNAME: ${{ github.repository_owner }}
                   HAS_REPOS: ${{ needs.detect-changes.outputs.has-repos }}
                   REPO_COUNT: ${{ needs.detect-changes.outputs.repo-count }}
@@ -115,7 +115,7 @@ jobs:
 
             - name: 📊 Generate Statistics
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  GITHUB_TOKEN: ${{ secrets.GH_PROFILE_TOKEN }}
                   USERNAME: ${{ github.repository_owner }}
               run: |
                   python scripts/generate_stats.py
