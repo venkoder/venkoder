@@ -97,18 +97,18 @@ jobs:
           if [ ! -f config/profile_config.json ]; then
             echo "📝 Creating default configuration..."
             cat << 'EOF' > config/profile_config.json
-{
-  "profile": {
-    "name": "VENKODER",
-    "title": "Full Stack Developer"
-  },
-  "projects": {
-    "max_display": 3,
-    "exclude_repos": ["dotfiles", "config"],
-    "show_if_empty": false
-  }
-}
-EOF
+            {
+            "profile": {
+            "name": "VENKODER",
+            "title": "Full Stack Developer"
+            },
+            "projects": {
+            "max_display": 3,
+            "exclude_repos": ["dotfiles", "config"],
+            "show_if_empty": false
+            }
+            }
+            EOF
           fi
 
       - name: 🎨 Update Projects Section
