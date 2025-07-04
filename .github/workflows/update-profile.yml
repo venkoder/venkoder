@@ -96,7 +96,7 @@ jobs:
         run: |
           if [ ! -f config/profile_config.json ]; then
             echo "📝 Creating default configuration..."
-            cat > config/profile_config.json << 'EOF'
+            cat << 'EOF' > config/profile_config.json
 {
   "profile": {
     "name": "VENKODER",
